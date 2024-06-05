@@ -17,7 +17,7 @@ def convert():
         webbrowser.open(f"{path.get()}.jpg", new=2)
     else:
         try:
-            client = pdfcrowd.PdfToHtmlClient('fedorr', 'f09932d1860c7013031e105fd0270379')
+            client = pdfcrowd.PdfToHtmlClient('fedorr', open("key.config", "r"))
             client.convertFileToFile(path.get(), path.get() + ".html")
             ready.config(text = "Конвертирование успешно")
             webbrowser.open(path.get() + ".html")
